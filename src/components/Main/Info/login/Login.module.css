@@ -1,0 +1,14 @@
+.mainLoginWrapper{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.wrapper{
+    margin-top: 10px;
+}
+.wrapper span::selection{
+    background: transparent;
+}
+.sumError{
+    color: red;
+}

@@ -1,0 +1,16 @@
+.userInfo{
+    display: grid;
+    grid-template-columns: 330px 5fr;
+    align-items: center;
+    height: 330px;
+    background: #c9c9c9;
+}
+.avatar{
+    height: 250px;
+    border-radius: 125px;
+    margin-left: 40px;
+}
+.textInfo{
+    display: grid;
+
+}

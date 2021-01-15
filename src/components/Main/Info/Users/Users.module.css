@@ -1,0 +1,23 @@
+.activeNum{
+    font-weight: bold;
+    font-size: 17px;
+    padding: 0 1px;
+}
+.pageNumberWrap{
+    line-height: 25px;
+    height: 25px;
+}
+.pageNumber{
+    padding: 0 2px;
+    transition: .1s;
+}
+.pageNumber:hover{
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .1s;
+}
+.userImg{
+    width: 40px;
+    height: 40px;
+}

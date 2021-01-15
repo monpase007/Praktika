@@ -1,43 +1,28 @@
 import React from 'react';
 import style from './ProfileFeed.module.css';
 import Post from "./Post/Post";
+import {Field, reduxForm} from "redux-form";
 
 
-
-function  ProfileFeed(props) {
-
+function ProfileFeed(props) {
     let posts = props.profilePage.Posts.map(p => <Post deletePost={props.deletePost}
-                                                             updateTextPost={props.updatePost}
-                                                             likePlusPost={props.likePlus}
-                                                             style={props.profilePage.StyleModal}
-                                                             id={p.id} value={p.values}
-                                                             likeCount={p.likeCount}
-                                                             url={p.urlImg}/>)
+                                                       updateTextPost={props.updatePost}
+                                                       likePlusPost={props.likePlus}
+                                                       likeMinusPost={props.likeMinus}
+                                                       style={props.profilePage.StyleModal}
+                                                       id={p.id} value={p.values}
+                                                       likeCount={p.likeCount}
+                                                       url={p.urlImg}
+                                                       likeFlag={p.likeFlag}/>)
 
-    let changeTextarea = (e) => {
-        let textPost = e.target.value;
-        props.changePostText(textPost);
-    };
-    let changeTextareaImg = (e) => {
-        let textLinkImg = e.target.value;
-        props.changePostLinkImg(textLinkImg);
-    };
-    let addPost = () => {
-        props.addPost();
+    let addPost = (values) => {
+        props.addPost(values.text, values.url);
     };
     return (
         <div className={style.profileFeed1}>
             {/*textarea area*/}
+            <AddPostForm onSubmit={addPost}/>
 
-            <div className={style.profileFeed} >
-                <div className={style.wrapInput}>
-                    <textarea onChange={changeTextarea} className={style.inputPost}  value={props.profilePage.textUpdate} placeholder='Напишите учебный пост для одногруппников...'type="text"/>
-                </div>
-                <div className={style.wrapInput2}>
-                    <textarea onChange={changeTextareaImg}  className={style.inputPost2} value={props.profilePage.textImglink} placeholder='Вставте ссылку на картинку...' type="text"/>
-                    <button onClick={addPost} className={style.btn}>Опубликовать</button>
-                </div>
-            </div>
             {/*Post area*/}
             <div className={style.posts}>
                 {posts}
@@ -47,5 +32,22 @@ function  ProfileFeed(props) {
         </div>
     );
 }
+
+const AddPostReduxForm = (props) => {
+    return (
+        <form onSubmit={props.handleSubmit} className={style.profileFeed}>
+            <div className={style.wrapInput}>
+                <Field className={style.inputPost} name={'text'} component={'textarea'} placeholder='Напишите учебный пост для одногруппников...'/>
+            </div>
+            <div className={style.wrapInput2}>
+                <Field className={style.inputPost2} name={'url'} component={'textarea'} placeholder='Вставте ссылку на картинку...'/>
+                <button className={style.btn}>Опубликовать</button>
+            </div>
+        </form>
+    )
+};
+let AddPostForm = reduxForm({
+    form: 'addPost'
+})(AddPostReduxForm);
 
 export default ProfileFeed;

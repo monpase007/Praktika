@@ -1,15 +1,38 @@
+.authMeWrap{
+    grid-area: authMe;
+}
 .header {
     height: 50px;
     width: 100%;
     background: #333;
     display: grid;
-    grid-template-areas: ". home qna logo friends subjects .";
-    grid-template-columns: 325px 1fr 1fr 1fr 1fr 1fr 325px ;
+    grid-template-areas: ". home qna logo friends subjects authMe";
+    grid-template-columns: 1fr 256px 256px 256px 256px 256px 1fr ;
     justify-items: center;
     align-items: center;
     color: #ccc;
 }
-.header > * {
+.authMe{
+    /*line-height: 50px;*/
+    margin-left: 30px;
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-column-gap: 5px;
+    /*justify-items: center;*/
+    align-items: center;
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 16px;
+}
+.authMe img{
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 15px;
+}
+.header > .home , .logo, .Qna, .friends, .users{
     border: solid black;
     border-width: 0 1px 0 1px;
     border-collapse: collapse;
@@ -32,10 +55,10 @@
 .friends{
     grid-area: friends;
 }
-.subjects{
+.users{
     grid-area: subjects;
 }
-.home, .logo, .QnA, .friends, .subjects {
+.home, .logo, .QnA, .friends, .users{
     display: inline-block;
     width: 100%;
     height: 50px;
@@ -43,8 +66,38 @@
     line-height: 50px;
     text-decoration: none;
     color: #ccc;
+
 }
 
-.home:hover, .logo:hover, .QnA:hover, .friends:hover, .subjects:hover{
+.home:hover, .logo:hover, .QnA:hover, .friends:hover, .users:hover{
     background: #444;
+}
+.authMe{
+
+}
+.authMeWrap:hover .logout{
+    visibility: visible;
+    opacity: 1;
+    transition: .2s;
+}
+.logout{
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    width: 250px;
+    height: 50px;
+    background: rgba(51, 51, 51, 0.72);
+    margin: 0px 0 0 -30px;
+    border-radius: 0 0 5px 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+    cursor: pointer;
+
+}
+.logout:hover{
+    background: rgba(209, 0, 3, 0.75);
+}
+.logout::selection{
+    background: transparent;
 }

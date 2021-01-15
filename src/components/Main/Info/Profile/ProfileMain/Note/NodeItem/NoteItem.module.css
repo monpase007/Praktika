@@ -13,6 +13,8 @@
     margin-top: 5px;
     border-bottom: 1px solid #f2f2f2;
     transition: .2s;
+    width: 100%;
+    border-radius: 10px;
 }
 .note:hover{
     background: #f2f2f2;

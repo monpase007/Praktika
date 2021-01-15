@@ -1,6 +1,6 @@
 .main{
     display: grid;
     grid-template-areas: ". info  .";
-    grid-template-columns: 325px 1fr  325px;
+    grid-template-columns: 1fr 1280px  1fr;
 
 }

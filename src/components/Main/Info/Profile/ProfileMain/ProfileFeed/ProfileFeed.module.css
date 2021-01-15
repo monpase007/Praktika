@@ -23,12 +23,13 @@
 .inputPost {
     display: block;
     box-sizing: border-box;
+    border: 1px solid #f2f2f2;
     width: 750px;
     height: 50px;
     padding: 5px 20px;
     resize: none;
     transition: 0.3s;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
 }
 /*.inputPost:focus{*/
@@ -39,16 +40,17 @@
 .inputPost2{
     display: block;
     box-sizing: border-box;
+    border: 1px solid #f2f2f2;
     width: 570px;
     height: 40px;
     padding: 5px 20px;
     resize: none;
     transition: 0.3s;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
 }
 .inputPost2:focus, .inputPost:focus{
-    box-shadow: 5px 5px 10px -5px rgba(184,184,184,0.8);
+    box-shadow: 5px 5px 10px -5px rgba(224, 224, 224, 0.8);
 }
 .btn{
     width: 150px;
@@ -56,7 +58,7 @@
     font-size: 16px;
     color: #333333;
     border: 1px solid #f2f2f2;
-    border-radius: 17px;
+    border-radius: 10px;
     background: #e0e0e0;
     outline: none;
 }

@@ -3,18 +3,22 @@ import style from './Info.module.css';
 import {Route} from "react-router-dom";
 import Profile from "./Profile/Profile";
 import QnA from "./QnA/QnA";
-import Subjects from "./Subjects/Subjects";
-import store from "../../../Redux/store";
-import Friends from "./Friends/Friends";
+import UserProfile from "./UserProfile/UserProfileContainer";
+import UsersTwoContainer from "./UsersTwo/UsersTwoContainer";
+import ViewUserProfileContainer from "./Profile/ViewUserProfile/ViewUserProfileContainer";
+import NoteContainer from "./Profile/ProfileMain/Note/NoteContainer";
+import LoginContainer from "./login/LoginContainer";
 
 function Info(props) {
     return (
-
         <div className={style.info}>
             <Route path='/profile' render={() => <Profile store={props.store}/>}/>
             <Route path='/qna' render={() => <QnA/>}/>
-            <Route path='/subjects' render={() => <Subjects/>}/>
-            <Route path='/friends' render={() => <Friends/>}/>
+            <Route path='/users' render={() => <UsersTwoContainer/>} />
+            <Route path='/note' render={() => <NoteContainer/>}/>
+            <Route path={'/userProfile'} render={()=> <UserProfile/>}/>
+            <Route path={'/viewUserProfile/:userId?'} render={()=> <ViewUserProfileContainer/>}/>
+            <Route path={'/login'} render={()=> <LoginContainer/>}/>
         </div>
 
     );

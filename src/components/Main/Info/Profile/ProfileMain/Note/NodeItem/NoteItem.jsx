@@ -27,12 +27,12 @@ function NoteItem(props) {
     let deleteNotes = () => {
         props.deleteNoteItem(id);
     };
-    debugger
+
     return (
         <div className={style.notes}>
 
             {/*Модальное окно для заметок*/}
-
+            <div></div>
             <Modal className={style.modalWindow} isOpen={modalIsOpen}
                    shouldCloseOnOverlayClick={() => setModalIsOpen(false)}
                    onRequestClose={() => setModalIsOpen(false)} style={props.notePage.StyleModal}>

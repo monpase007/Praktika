@@ -1,0 +1,9 @@
+.userProfile {
+    display: grid;
+    grid-template-areas: "userInfo userInfo"
+    "feed nav";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+    height: 100%;
+}

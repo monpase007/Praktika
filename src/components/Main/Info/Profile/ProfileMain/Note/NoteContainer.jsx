@@ -8,6 +8,8 @@ import {
 } from "../../../../../../Redux/NotesReducer";
 import Note from "./Note";
 import {connect} from "react-redux";
+import {compose} from "redux";
+import withRedirectHOC from "../../../../../../HOC/Redirect/RedirectHOC";
 
 let mapStateToProps = (state) => ({
     notePage: state.notePage
@@ -30,6 +32,9 @@ let mapDispatchToProps = (dispatch) => ({
     }
 });
 
-const NoteContainer = connect(mapStateToProps,mapDispatchToProps)(Note);
 
-export default NoteContainer;
+
+export default compose(
+    connect(mapStateToProps,mapDispatchToProps),
+    withRedirectHOC
+)(Note);

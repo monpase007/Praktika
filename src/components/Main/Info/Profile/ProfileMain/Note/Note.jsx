@@ -1,8 +1,11 @@
 import React from 'react';
 import style from "./Note.module.css"
 import NoteItem from "./NodeItem/NoteItem";
+import Background from '../../../../../../assets/images/noteBg.jpg'
 
-function  Note(props) {
+const Note = (props) => {
+
+
 
     let Notes = props.notePage.Notes.map(n => <NoteItem updateTextNotes={props.updateNotes}
                                                         updateNameText={props.updateName}
@@ -14,11 +17,19 @@ function  Note(props) {
         props.addNote();
     };
     return (
-        <div>
-            <div className={style.wrap}>
-                <button onClick={addNote} className={style.btn} title="Добавить заметку">&#10010; Добавить заметку</button>
+        <div className={style.mainWrap}>
+            <div className={style.bg} style={{
+                backgroundImage: `url(${Background})`,
+                backgroundPosition: '-600px -600px'
+            }}/>
+            <div className={style.header}>
+                <span>Мои заметки</span>
             </div>
-            <div>
+            <div className={style.wrap}>
+                <div className={style.btnWrap}>
+                    <button onClick={addNote} className={style.btn} title="Добавить заметку">&#10010; Добавить заметку
+                    </button>
+                </div>
                 {Notes}
             </div>
         </div>

@@ -1,9 +1,7 @@
 import React from 'react';
 import {
     addPostCreate,
-    deletePostCreate, likePostPlusCreate, updatePostCreate,
-    updateTextareaImgCreate,
-    updateTextareaPostCreate
+    deletePostCreate, likePostMinusCreate, likePostPlusCreate, updatePostCreate
 } from "../../../../../../Redux/ProfileReducer";
 import ProfileFeed from "./ProfileFeed";
 
@@ -14,14 +12,8 @@ let mapStateToProps = (state) => ({
         profilePage: state.profilePage
     });
 let mapDispatchToProps = (dispatch) =>({
-        changePostText: (textPost) => {
-            dispatch(updateTextareaPostCreate(textPost));
-        },
-        changePostLinkImg: (textLinkImg) => {
-            dispatch(updateTextareaImgCreate(textLinkImg));
-        },
-        addPost: () => {
-            dispatch(addPostCreate());
+        addPost: (text,value) => {
+            dispatch(addPostCreate(text,value));
         },
         deletePost: (id) => {
             dispatch(deletePostCreate(id));
@@ -29,12 +21,15 @@ let mapDispatchToProps = (dispatch) =>({
         updatePost: (id, text) => {
             dispatch(updatePostCreate(id, text));
         },
-        likePlus: (id) => {
-            dispatch(likePostPlusCreate(id));
+        likePlus: (id,likeFlag) => {
+                dispatch(likePostPlusCreate(id));
+        },
+        likeMinus: (id,likeFlag) => {
+                dispatch(likePostMinusCreate(id));
         }
     });
 
-const ProfileFeedContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileFeed);
+const   ProfileFeedContainer = connect(mapStateToProps, mapDispatchToProps)(ProfileFeed);
 
 
 export default ProfileFeedContainer;

@@ -53,7 +53,7 @@
 }
 .textArea {
     box-sizing: border-box;
-    height: 270px;
+    height: 300px;
     width: 606px;
     padding: 10px 20px;
     margin-top: 50px;
@@ -69,6 +69,8 @@
     border-color: #ebebeb;
 }
 .img{
+
+    cursor: pointer;
     width: 60px;
     height: 60px;
     border-radius: 30px;
@@ -77,6 +79,9 @@
     display: grid;
     grid-template-columns: 1fr 8fr;
     align-items: center;
+}
+.name:hover{
+    cursor: pointer;
 }
 .date{
     font-size: 12px;
@@ -92,6 +97,10 @@
     color: white;
     cursor: pointer;
     transition: .2s;
+
+}
+.posts:hover .option:hover{
+    color: #898989;
 }
 .btnsPosts{
     display: grid;
@@ -101,32 +110,108 @@
 .posts:hover .option{
     color: #333333;
 }
-.btn {
-    width: 25px;
-    height: 25px;
-    margin-left: 10px;
-    font-size: 20px;
-    line-height: 25px;
-    padding: 0;
-    border: none;
-    background: white;
-    outline: none;
-    color: #333333;
-    transition: color 0.3s;
-    margin-top: 5px;
-    cursor: pointer;
+.bottom{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100px;
+    height: 40px;
 }
-.btn:hover{
+.btn::after {
+    display: inline-block;
+    line-height: 25px;
+    font-family: icomoon, sans-serif;
+    content: '\e901';
+    color: #333333;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .1s;
+}
+.btn:hover::after{
     color: #898989;
+}
+.btn:active::after{
+    opacity: 0;
+    transition: .1s;
+    transform: rotate(360deg);
+
+}
+.btnA::after{
+    font-size: 25px;
+    color: rgba(255, 0, 0, 0.79);
+}
+.btnA:hover::after{
+    color: rgba(255, 0, 0, 0.63);
+}
+.comment::after {
+    line-height: 25px;
+    font-family: icomoon, sans-serif;
+    content: '\e900';
+    color: #333333;
+    font-size: 25px;
+    font-weight: bold;
+}
+.comment:hover::after{
+    color: #898989;
+    cursor: pointer;
 }
 .content{
     border-bottom: 1px solid #f2f2f2;
 }
+.wrap{
+    font-weight: bold;
+}
 .imgPost{
+    border-radius: 5px;
     max-width: 100%;
     max-height: 600px;
     margin-bottom: 10px;
 }
 .textPost{
     margin-bottom: 10px;
+}
+.commentBlockDontView{
+    display: none;
+    margin-top: 10px;
+}
+.commentBlockView{
+    display: grid;
+    margin-top: 10px;
+}
+.comments{
+    width: 90%;
+}
+.commentWrapInput{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 670px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.textAreaComment {
+    width: 670px;
+    box-sizing: border-box;
+    border: 1px solid #f2f2f2;
+    height: 35px;
+    padding: 5px 20px;
+    resize: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    outline: none;
+}
+.textAreaComment:focus{
+    box-shadow: 5px 5px 10px -5px rgba(224, 224, 224, 0.8);
+}
+.btnSentComment::after{
+    font-family: 'icomoon', sans-serif;
+    content: '\e903';
+    color: #333333;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+.btnSentComment:hover::after{
+    color: #898989;
 }
