@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/Praktika/static/css/main.cbcabe33.chunk.css",
+    "main.js": "/Praktika/static/js/main.fcacc40f.chunk.js",
+    "main.js.map": "/Praktika/static/js/main.fcacc40f.chunk.js.map",
+    "runtime-main.js": "/Praktika/static/js/runtime-main.e1345228.js",
+    "runtime-main.js.map": "/Praktika/static/js/runtime-main.e1345228.js.map",
+    "static/js/2.5ec50fee.chunk.js": "/Praktika/static/js/2.5ec50fee.chunk.js",
+    "static/js/2.5ec50fee.chunk.js.map": "/Praktika/static/js/2.5ec50fee.chunk.js.map",
+    "index.html": "/Praktika/index.html",
+    "precache-manifest.74241547550923cc89d787d96912aa0e.js": "/Praktika/precache-manifest.74241547550923cc89d787d96912aa0e.js",
+    "service-worker.js": "/Praktika/service-worker.js",
+    "static/css/main.cbcabe33.chunk.css.map": "/Praktika/static/css/main.cbcabe33.chunk.css.map",
+    "static/js/2.5ec50fee.chunk.js.LICENSE.txt": "/Praktika/static/js/2.5ec50fee.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Praktika/static/media/icomoon.eb9982ce.woff",
+    "static/media/icon-avatar-16.jpg": "/Praktika/static/media/icon-avatar-16.6c9609f2.jpg",
+    "static/media/noteBg.jpg": "/Praktika/static/media/noteBg.8ef2f432.jpg",
+    "static/media/preloader.svg": "/Praktika/static/media/preloader.0e4099c3.svg",
+    "static/media/warning.png": "/Praktika/static/media/warning.9f8ef976.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1345228.js",
+    "static/js/2.5ec50fee.chunk.js",
+    "static/css/main.cbcabe33.chunk.css",
+    "static/js/main.fcacc40f.chunk.js"
+  ]
+}
