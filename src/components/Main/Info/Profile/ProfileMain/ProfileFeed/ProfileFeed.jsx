@@ -17,6 +17,7 @@ function ProfileFeed(props) {
 
     let addPost = (values) => {
         props.addPost(values.text, values.url);
+        values.text = values.url = ''
     };
     return (
         <div className={style.profileFeed1}>

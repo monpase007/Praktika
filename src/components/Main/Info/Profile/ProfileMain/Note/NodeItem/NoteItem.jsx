@@ -2,9 +2,7 @@ import React, {useState} from 'react';
 import style from './NoteItem.module.css';
 import Modal from "react-modal";
 
-
 Modal.setAppElement('#root');
-
 
 function NoteItem(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -37,7 +35,7 @@ function NoteItem(props) {
                    shouldCloseOnOverlayClick={() => setModalIsOpen(false)}
                    onRequestClose={() => setModalIsOpen(false)} style={props.notePage.StyleModal}>
                 <a onClick={() => setModalIsOpen(false)} className={style.close}>&#10006;</a>
-                <input onChange={updateName} className={style.nameNoteModal}  value={props.name}/>
+                <input maxLength={30} onChange={updateName} className={style.nameNoteModal}  value={props.name}/>
                 <div className={style.bodyModalNote}>
                     <textarea onChange={updateNotes} className={style.textArea} value={props.value}
                               name="notes"/>

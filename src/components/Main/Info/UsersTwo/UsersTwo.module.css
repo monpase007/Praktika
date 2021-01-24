@@ -27,14 +27,47 @@
     display: inline-block;
     width: 150px;
 }
-.numberPage::selection{
-    background: transparent;
-}
 .activeNumber{
     font-weight: bold;
     cursor: pointer;
 }
-.numberPage{
+.paginatorBox{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.number{
+    min-width: 400px;
+    /*border: 1px solid #999;*/
+}
+.tripleDots{
+    display: inline-block;
+    min-width: 40px;
+    min-height: 20px;
+    padding: 5px;
     cursor: pointer;
+    border: 1px solid #999;
+    margin: 10px 2px 2px 2px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    text-align: center;
+}
+.numberPage{
+    display: inline-block;
+    min-width: 49px;
+    min-height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #999;
+    margin: 10px 2px 2px 2px;
+    background: #f2f2f2;
+    border-radius: 4px;
+    text-align: center;
+}
+.numberPage:hover{
+    background: #dddddd;
+}
+.numberPage::selection{
+    background: transparent;
 }
 

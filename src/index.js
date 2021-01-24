@@ -11,15 +11,16 @@ import {Provider} from "react-redux";
 
 
 let renderFull = () =>{
-    ReactDOM.render(
-        <React.StrictMode>
-            <Provider store={store}>
-                <App/>
-            </Provider>
-        </React.StrictMode>,
-        document.getElementById('root')
-    );
+
 };
 renderFull();
-store.subscribe(renderFull);
+ReactDOM.render(
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
+// store.subscribe(renderFull);
 serviceWorker.unregister();

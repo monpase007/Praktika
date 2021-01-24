@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import style from './Post.module.css';
 import Modal from "react-modal";
 
-Modal.setAppElement = function (s) {
-};
 Modal.setAppElement('#root');
 
 function Post(props) {

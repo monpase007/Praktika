@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from "./Note.module.css"
 import NoteItem from "./NodeItem/NoteItem";
 import Background from '../../../../../../assets/images/noteBg.jpg'
+import Modal from "react-modal";
 
 const Note = (props) => {
 
@@ -27,8 +28,7 @@ const Note = (props) => {
             </div>
             <div className={style.wrap}>
                 <div className={style.btnWrap}>
-                    <button onClick={addNote} className={style.btn} title="Добавить заметку">&#10010; Добавить заметку
-                    </button>
+                    <button onClick={addNote} className={style.btn} title="Добавить заметку">&#10010; Добавить заметку</button>
                 </div>
                 {Notes}
             </div>

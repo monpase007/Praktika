@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {
-    follow,
+    followThunk,
     followSuccessful, getUsers,
-    isProgressFollowing, unfollow,
+    isProgressFollowing, unfollowThunk,
     unfollowSuccessful,
     updateNumberActive
 } from "../../../../Redux/UserTwoReducer";
@@ -42,8 +42,8 @@ let mapDispatchToProps = {followSuccessful,
     updateNumberActive,
     isProgressFollowing,
     getUsers,
-    follow,
-    unfollow
+    followThunk,
+    unfollowThunk
 
 };
 

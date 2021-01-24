@@ -1,7 +1,6 @@
 import {applyMiddleware, combineReducers, createStore} from 'redux'
 import ProfileReducer from "./ProfileReducer";
 import NotesReducer from "./NotesReducer";
-import UsersReducer from "./UsersReducer";
 import UsersTwoReducer from "./UserTwoReducer";
 import ViewUserProfileReducer from "./ViewUserProfileReducer";
 import middleware from 'redux-thunk';
@@ -12,7 +11,6 @@ import AppReducer from "./AppReducer";
 let reducers = combineReducers({
     profilePage: ProfileReducer,
     notePage: NotesReducer,
-    usersPage: UsersReducer,
     userTwoPage: UsersTwoReducer,
     userProfile: ViewUserProfileReducer,
     form: formReducer,

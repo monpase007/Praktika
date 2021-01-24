@@ -83,7 +83,6 @@ const ProfileReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             if (state.Posts.length === 0) {
-
                 return {
                     ...state,
                     Posts: [{
@@ -235,7 +234,6 @@ export const setLogin = (email, password, rememberMe, captcha) => (dispatch) => 
 
 export const setLogout = () => (dispatch) => {
     AuthAPI.logout().then(request => {
-        debugger
         if (!request.data.resultCode) {
             dispatch(outAuth());
         }
@@ -267,7 +265,6 @@ export const requestStatus = (userId) => (dispatch) => {
     })
 };
 export const setStatus = (status) => (dispatch) => {
-    debugger
     ProfileAPI.setStatus(status).then(request => {
         debugger
         if (!request.data.resultCode) {
