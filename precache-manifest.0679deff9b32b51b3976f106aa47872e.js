@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9460e8ea1dc1637b6c085e4a66a4b03a",
+    "revision": "a74a0aa34e2ac99d495c763abc445acd",
     "url": "/Praktika/index.html"
   },
   {
-    "revision": "01ae6b15de94b65e819d",
+    "revision": "046e9135966ef3274317",
     "url": "/Praktika/static/css/main.b7927010.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Praktika/static/js/2.f2a55595.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "01ae6b15de94b65e819d",
-    "url": "/Praktika/static/js/main.7fa64867.chunk.js"
+    "revision": "046e9135966ef3274317",
+    "url": "/Praktika/static/js/main.ffb364af.chunk.js"
   },
   {
     "revision": "d034658e98599852fa01",

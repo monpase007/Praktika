@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Praktika/static/css/main.b7927010.chunk.css",
-    "main.js": "/Praktika/static/js/main.7fa64867.chunk.js",
-    "main.js.map": "/Praktika/static/js/main.7fa64867.chunk.js.map",
+    "main.js": "/Praktika/static/js/main.ffb364af.chunk.js",
+    "main.js.map": "/Praktika/static/js/main.ffb364af.chunk.js.map",
     "runtime-main.js": "/Praktika/static/js/runtime-main.e1345228.js",
     "runtime-main.js.map": "/Praktika/static/js/runtime-main.e1345228.js.map",
     "static/js/2.f2a55595.chunk.js": "/Praktika/static/js/2.f2a55595.chunk.js",
     "static/js/2.f2a55595.chunk.js.map": "/Praktika/static/js/2.f2a55595.chunk.js.map",
     "index.html": "/Praktika/index.html",
-    "precache-manifest.2c9084f9e0b9a281b1a71fac8049a9c9.js": "/Praktika/precache-manifest.2c9084f9e0b9a281b1a71fac8049a9c9.js",
+    "precache-manifest.0679deff9b32b51b3976f106aa47872e.js": "/Praktika/precache-manifest.0679deff9b32b51b3976f106aa47872e.js",
     "service-worker.js": "/Praktika/service-worker.js",
     "static/css/main.b7927010.chunk.css.map": "/Praktika/static/css/main.b7927010.chunk.css.map",
     "static/js/2.f2a55595.chunk.js.LICENSE.txt": "/Praktika/static/js/2.f2a55595.chunk.js.LICENSE.txt",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.e1345228.js",
     "static/js/2.f2a55595.chunk.js",
     "static/css/main.b7927010.chunk.css",
-    "static/js/main.7fa64867.chunk.js"
+    "static/js/main.ffb364af.chunk.js"
   ]
 }
