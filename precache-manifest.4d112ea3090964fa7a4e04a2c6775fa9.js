@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "36443d5fb71385b65790f74c243b011d",
+    "revision": "352bf23d2cb008911c2558b9fb904f28",
     "url": "/Praktika/index.html"
   },
   {
-    "revision": "52e8e3087478940583d7",
-    "url": "/Praktika/static/css/main.a9ae93c3.chunk.css"
+    "revision": "d8872ff914ac3c8e77cc",
+    "url": "/Praktika/static/css/main.dbf12dfd.chunk.css"
   },
   {
-    "revision": "7761cb7ba5a69e3dfb01",
-    "url": "/Praktika/static/js/2.be2409a7.chunk.js"
+    "revision": "fe1aa5727830b6207fdc",
+    "url": "/Praktika/static/js/2.177e3118.chunk.js"
   },
   {
     "revision": "a1a636632721a402612df3e043dd630d",
-    "url": "/Praktika/static/js/2.be2409a7.chunk.js.LICENSE.txt"
+    "url": "/Praktika/static/js/2.177e3118.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "52e8e3087478940583d7",
-    "url": "/Praktika/static/js/main.5d178766.chunk.js"
+    "revision": "d8872ff914ac3c8e77cc",
+    "url": "/Praktika/static/js/main.eb9fd7e4.chunk.js"
   },
   {
     "revision": "d034658e98599852fa01",
