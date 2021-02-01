@@ -1,0 +1,34 @@
+.statusInputBox{
+    display: grid;
+    grid-template-columns: 500px 80px;
+    align-items: center;
+}
+.statusText{
+    color: #404040;
+    cursor: pointer;
+}
+.btn{
+    z-index: 20;
+    width: 100px;
+    height: 20px;
+    margin-left: -105px;
+    font-size: 12px;
+}
+.statusInput{
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #f2f2f2;
+    width: 500px;
+    height: 30px;
+    padding: 5px 20px 5px 10px;
+    resize: none;
+    transition: 0.3s;
+    border-radius: 4px;
+    outline: none;
+}
+ .statusInput:focus{
+    opacity: 1;
+    border:1px solid #9c9c9c;
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,.16);
+    outline: none;
+}

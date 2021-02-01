@@ -1,0 +1,32 @@
+@headerC: #999;
+.gridTemplate(@align,@justify){
+  display: grid;
+  align-items: @align;
+  justify-items: @justify;
+}
+.sizeBox(@a,@b){
+  width: @a;
+  height: @b;
+}
+.aboutMeBox{
+  .gridTemplate(center,center);
+  .headerBlock{
+    text-align: center;
+    margin-top: 30px;
+    .sizeBox(100%,50px);
+    .AboutMe{
+      font-size: 30px;
+      color: @headerC;
+    }
+  }
+  .dataInfoMe{
+    .gridTemplate(center,left);
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+    .fieldBox{
+      .gridTemplate(center,left);
+      grid-template-columns: 3fr 2fr;
+
+    }
+  }
+}

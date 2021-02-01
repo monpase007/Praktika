@@ -9,7 +9,8 @@ import {connect} from "react-redux";
 
 
 let mapStateToProps = (state) => ({
-        profilePage: state.profilePage
+        profilePage: state.profilePage,
+        avatar: state.profilePage.userProfileInfoMe.photos.small
     });
 let mapDispatchToProps = (dispatch) =>({
         addPost: (text,value) => {

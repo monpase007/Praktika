@@ -1,0 +1,19 @@
+.modalWindow {
+  position: fixed;
+  display: grid;
+  grid-template-rows: 3fr 5fr 3fr;
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -390px;
+  width: 800px;
+  height: 800px;
+  padding: 30px 20px 30px 20px;
+  border-radius: 10px;
+  justify-items: center;
+  align-items: center;
+  outline: none;
+  background: #f7f7f7;
+  color: #333333;
+}
+/*# sourceMappingURL=FormModalAboutMe.module.css.map */

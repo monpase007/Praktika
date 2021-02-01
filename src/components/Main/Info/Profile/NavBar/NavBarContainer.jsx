@@ -16,7 +16,7 @@ class NavBarContainer extends React.Component{
     }
 }
 const mapStateToProps = (state)=> ({
-    friends: getShuffleFriends(state)
+    friends: getShuffleFriends(state),
 });
 const mapDispatchToProps = {
     getFriends,

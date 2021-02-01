@@ -1,0 +1,55 @@
+.navBar{
+  grid-area: nav;
+  .friends {
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 18px;
+    color: #333333;
+    &::selection{
+      background: transparent;
+    }
+  }
+  .dataInfoMe{
+    display: grid;
+    grid-template-columns: 1fr;
+    .nestingAboutMeBox{
+      margin-left: 20px;
+    }
+  }
+  .boxFriends {
+    display: grid;
+    grid-template-columns: repeat(3,90px);
+    margin: 10px 0 10px 0;
+    padding: 0 0 10px 0;
+    width: 90%;
+    min-height: 205px;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    .friendsBlock{
+      margin: 5px;
+      &:hover .nameFriend{
+        color:#333333;
+      }
+      .nameFriend{
+        width: 80px;
+        text-overflow: ellipsis ;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .imgFriends{
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+      }
+      .navLink{
+        text-decoration: none;
+        color: #999;
+      }
+    }
+  }
+
+}
+
+
+
+

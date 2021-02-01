@@ -1,21 +1,79 @@
+
 .userInfo {
     grid-area: userInfo;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    height: 200px;
+    grid-template-columns: 1fr 4fr;
+    height: 260px;
     padding: 25px;
     background: rgba(0, 0, 0, 0.32);
 }
-.avatar{
+.aboutMe{
+    width: 500px;
+    margin: 10px 0 0  0px;
+    padding: 10px 0 0 0px;
+    border-top: 1px solid #999;
+    color: #404040;
+}
+.aboutMe button{
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #999;
+    outline: none;
+}
+.updateAvatarBtn {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.updateAvatarLabal{
+    position: absolute;
+    margin: 150px 0 0 -160px;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+    color: #f2f2f2;
+}
+.avatarBox:hover .updateAvatarLabal {
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 1;
+    display: inline-block;
+    transition: .3s;
+
+}
+.avatarBox{
     width: 200px;
     height: 200px;
     border-radius: 100px;
+    z-index: 100;
+    transition: .3s;
+    overflow: hidden;
 }
+.avatarBox:hover{
+    background: rgba(0,0,0,.5);
+    transition: .3s;
+}
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    transition: .3s;
+}
+.avatarBox:hover .avatar{
+    transition: .3s;
+    opacity: .5;
+    transform: scale(1.1);
+}
+
 .userName {
     display: inline-block;
     padding: 5px 10px 5px 10px;
     font-size: 24px;
-    background: #222;
+    background: #333333;
     color: #f2f2f2;
-    /*border-radius: 5px;*/
+    margin-bottom: 20px;
+    border-radius: 10px;
 }

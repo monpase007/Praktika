@@ -14,6 +14,7 @@ const AUTH_SET_TIMOUT = "AUTH_SET_TIMOUT";
 const GET_USER_STATUS = "GET_USER_STATUS";
 const CAPTCHA = "CAPTCHA";
 const LOGOUT = "LOGOUT";
+const SET_UPDATE_PHOTO = "SET_UPDATE_PHOTO";
 
 // define function when return obj (action)
 
@@ -23,15 +24,13 @@ let initialState = {
     Posts: [
         {
             id: 1,
-            values: "всее чиил",
-            urlImg: 'https://images4.alphacoders.com/921/thumb-1920-921846.jpg',
+            values: "Всем привет",
+            urlImg: 'https://techrocks.ru/wp-content/uploads/2019/03/content_0e5a9923.jpg',
             comment: ["This is coool)*)"],
             likeCount: 23,
             likeFlag: true
         }
     ],
-    textUpdate: '',
-    textImglink: '',
     StyleModal: {
         overlay: {
             position: 'fixed',
@@ -39,6 +38,7 @@ let initialState = {
             left: 0,
             right: 0,
             bottom: 0,
+            zIndex: 9999,
             backgroundColor: 'rgba(68,68,68,0.65)'
         }
     },
@@ -98,7 +98,6 @@ const ProfileReducer = (state = initialState, action) => {
                 };
             } else {
                 let temp = state.Posts[0].id + 1;
-                debugger
                 return {
                     ...state,
                     Posts: [{
@@ -182,6 +181,12 @@ const ProfileReducer = (state = initialState, action) => {
                 captchaURL: action.url
             }
         }
+        case SET_UPDATE_PHOTO: {
+            return {
+                ...state,
+                userProfileInfoMe: {...state.userProfileInfoMe, photos: action.photos }
+            }
+        }
         default:
             return state;
     }
@@ -201,73 +206,81 @@ export const outAuth = () => ({type: OUT_AUTH});
 export const AuthSetTimeout = () => ({type: AUTH_SET_TIMOUT});
 export const getUserStatus = (status) => ({type: GET_USER_STATUS, status});
 export const captcha = (url) => ({type: CAPTCHA, url});
+export const setUpdatePhoto = (photos) => ({type: SET_UPDATE_PHOTO, photos});
 export const logout = () => ({type: LOGOUT});
 
+export const setUserData = (UserData,setEditModForm) => (dispatch) => {
+    ProfileAPI.setDataUser(UserData).then(response => {
+        if(response.data.resultCode === 0){
+            dispatch(getMyProfile());
+            setEditModForm();
 
+        }else {
+
+                dispatch(stopSubmit('ProfileDataForm',{_error : 'все ссылки должны быть валидными'}))
+
+        }
+    })
+};
+
+export const setPhoto = (photoFile) => (dispatch) => {
+    ProfileAPI.setPhotoFile(photoFile).then(response => {
+        dispatch(setUpdatePhoto(response.data.data.photos))
+    })
+}
 export const getCaptcha = () => (dispatch) => {
-    AuthAPI.captcha().then(request => {
-        dispatch(captcha(request.data.url));
+    AuthAPI.captcha().then(response => {
+        dispatch(captcha(response.data.url));
         dispatch(stopSubmit('login',{_error: "Введите капчу" }));
     })
 }
 
 export const setLogin = (email, password, rememberMe, captcha) => (dispatch) => {
     !captcha ?
-        AuthAPI.login(email, password, rememberMe).then(request => {
-            if (!request.data.resultCode) {
+        AuthAPI.login(email, password, rememberMe).then(response => {
+            if (!response.data.resultCode) {
                 dispatch(getMyProfile());
             }else {
-                debugger;
-                dispatch(stopSubmit('login',{_error: request.data.messages[0] }));
-                request.data.resultCode === 10 && dispatch(getCaptcha());
+                dispatch(stopSubmit('login',{_error: response.data.messages[0] }));
+                response.data.resultCode === 10 && dispatch(getCaptcha());
             }
         })
-        : AuthAPI.login(email, password, rememberMe, captcha).then(request => {
-            if (!request.data.resultCode) {
+        : AuthAPI.login(email, password, rememberMe, captcha).then(response => {
+            if (!response.data.resultCode) {
                 dispatch(getMyProfile());
             }else {
-                request.data.resultCode === 10 && dispatch(getCaptcha());
-                dispatch(stopSubmit('login',{_error: request.data.messages[0] }));
+                response.data.resultCode === 10 && dispatch(getCaptcha());
+                dispatch(stopSubmit('login',{_error: response.data.messages[0] }));
             }
         })
 }
 
 export const setLogout = () => (dispatch) => {
-    AuthAPI.logout().then(request => {
-        if (!request.data.resultCode) {
+    AuthAPI.logout().then(response => {
+        if (!response.data.resultCode) {
             dispatch(outAuth());
         }
     })
 }
 
 export const getMyProfile = () => (dispatch) => {
-   return AuthAPI.auth().then(request => {
-        if (!request.data.resultCode) {
-            dispatch(setUserInfo(request.data.data))
-            ProfileAPI.viewUserProfile(request.data.data.id).then(request => {
-                dispatch(setUserInfoMe(request.data));
+   return AuthAPI.auth().then(response => {
+        if (!response.data.resultCode) {
+            dispatch(setUserInfo(response.data.data))
+            ProfileAPI.viewUserProfile(response.data.data.id).then(response => {
+                dispatch(setUserInfoMe(response.data));
             })
         } else dispatch(outAuth());
     })
 }
-export const authSetTimeout = () => (dispatch) => {
-    const auther = setTimeout((time) => {
-        AuthAPI.auth().then(request => {
-            if (request.data)
-                dispatch(AuthSetTimeout());
-        })
-    }, 500);
-
-};
 export const requestStatus = (userId) => (dispatch) => {
-    ProfileAPI.getStatus(userId).then(request => {
-        dispatch(getUserStatus(request.data))
+    ProfileAPI.getStatus(userId).then(response => {
+        dispatch(getUserStatus(response.data))
     })
 };
 export const setStatus = (status) => (dispatch) => {
-    ProfileAPI.setStatus(status).then(request => {
-        debugger
-        if (!request.data.resultCode) {
+    ProfileAPI.setStatus(status).then(response => {
+        if (!response.data.resultCode) {
             dispatch(getUserStatus(status))
         }
     })

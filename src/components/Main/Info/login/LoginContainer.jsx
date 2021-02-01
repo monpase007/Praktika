@@ -24,7 +24,6 @@ let mapStateToProps = state => ({
 });
 
 let mapDispatchToProps = {
-    authSetTimeout,
     setLogin
 };
 

@@ -2,11 +2,11 @@
 export const validateEmpty = (values) =>{
     if(values)
     return undefined;
-    else return 'Ебать, ты  додик чтоле, напиши ченьть, будь человеком!'
+    else return 'Строка не должна быть пустой'
 }
 export const validateMaxLength = (length) => (values) =>{
     if(values.length > length)
-        return `Ебать, ты додик чтоле, то ниче не пишешь, то настрочил больше ${length} символов `;
+        return `Строка не должна быть больше ${length} символов `;
     else return undefined
 }
 

@@ -21,14 +21,10 @@ class MyStatus extends React.Component {
             editMode: false
         })
     };
-    deActivateEditModeDiv = (e) =>{
-            if (e.target.tagName !== "button" && e.target.tagName !== "input" ) {
-                this.setState({
-                    editMode: false
-                })
-        }
+    setTimoutDeActivate = () => {
+        setTimeout(this.deActivateEditMode, 100);
 
-    };
+    }
     saveStatus = () =>{
         this.props.setStatus(this.state.status);
         this.deActivateEditMode();
@@ -50,11 +46,11 @@ class MyStatus extends React.Component {
             <div>
                 {!this.state.editMode
                     ? <div className={style.statusText}>
-                        <span onDoubleClick={this.activateEditMode} >{this.props.status || 'No status'}</span>
+                        <span onClick={this.activateEditMode} >{this.props.status || 'No status'}</span>
                     </div>
-                    : <div className={style.statusInput}>
-                        <input  value={this.state.status} autoFocus={true}  onChange={this.onStatusChange} type="text"/>
-                        <button onClick={this.saveStatus}>Сохранить</button>
+                    : <div className={style.statusInputBox}>
+                        <textarea className={style.statusInput} onBlur={this.setTimoutDeActivate}  value={this.state.status} autoFocus={true}  onChange={this.onStatusChange} type="text"/>
+                        <button className={style.btn} onClick={this.saveStatus}>Сохранить</button>
                     </div>
                 }
             </div>

@@ -46,7 +46,7 @@ function Post(props) {
             </Modal>
             <div className={style.user}>
                 <img className={style.img}
-                     src="https://sun7-7.userapi.com/impf/c845419/v845419980/19601a/fYUtyCJnvO4.jpg?size=200x0&quality=90&sign=ef7740b6c1729cf94818347692822a20&ava=1"
+                     src={props.avatar}
                      alt="аватарка"/>
                 <div className={style.headerPost}>
                     <div>

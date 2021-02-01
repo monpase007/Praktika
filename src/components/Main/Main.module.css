@@ -2,5 +2,6 @@
     display: grid;
     grid-template-areas: ". info  .";
     grid-template-columns: 1fr 1280px  1fr;
+    margin-top: 50px;
 
 }

@@ -1,37 +1,51 @@
-.navBar{
-    grid-area: nav;
+.navBar {
+  grid-area: nav;
 }
-.friends {
-    text-decoration: none;
-    color: #333333;
+.navBar .friends {
+  text-decoration: none;
+  margin-left: 5px;
+  font-size: 18px;
+  color: #333333;
 }
-.friends::selection{
-    background: transparent;
+.navBar .friends::selection {
+  background: transparent;
 }
-.imgFriends{
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
+.navBar .dataInfoMe {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-.nameFriend{
-    width: 80px;
-    text-overflow: ellipsis ;
-    overflow: hidden;
-    white-space: nowrap;
+.navBar .dataInfoMe .nestingAboutMeBox {
+  margin-left: 20px;
 }
-.navLink{
-    text-decoration: none;
-    color: #999;
+.navBar .boxFriends {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  margin: 10px 0 10px 0;
+  padding: 0 0 10px 0;
+  width: 90%;
+  min-height: 205px;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
 }
-.friendsBlock{
-    margin: 5px;
+.navBar .boxFriends .friendsBlock {
+  margin: 5px;
 }
-.box {
-    display: grid;
-    grid-template-columns: repeat(3,90px);
-    margin: 5px 0 10px 0;
-    padding: 0 0 10px 0;
-    width: 90%;
-    min-height: 205px;
-    border-bottom: 1px solid #f2f2f2;
+.navBar .boxFriends .friendsBlock:hover .nameFriend {
+  color: #333333;
 }
+.navBar .boxFriends .friendsBlock .nameFriend {
+  width: 80px;
+  text-overflow: ellipsis ;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.navBar .boxFriends .friendsBlock .imgFriends {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+.navBar .boxFriends .friendsBlock .navLink {
+  text-decoration: none;
+  color: #999;
+}
+/*# sourceMappingURL=NavBar.module.css.map */

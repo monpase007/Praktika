@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Main from "./components/Main/Main";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, HashRouter} from "react-router-dom";
 import HeaderContainer from "./components/Header/HeaderContainter";
 import {connect} from "react-redux";
 import {initializeApp} from "./Redux/AppReducer";
@@ -17,10 +17,10 @@ class App extends React.Component {
     render() {
         return ( !this.props.initialized? <Preloader/>
         : <div className="App">
-                <BrowserRouter>
+                <HashRouter>
                     <HeaderContainer/>
                     <Main store={this.props.store}/>
-                </BrowserRouter>
+                </HashRouter>
             </div>)
     }
 }

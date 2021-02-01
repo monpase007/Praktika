@@ -1,103 +1,151 @@
-.authMeWrap{
-    grid-area: authMe;
+.gridTemplate {
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 .header {
-    height: 50px;
-    width: 100%;
-    background: #333;
-    display: grid;
-    grid-template-areas: ". home qna logo friends subjects authMe";
-    grid-template-columns: 1fr 256px 256px 256px 256px 256px 1fr ;
-    justify-items: center;
-    align-items: center;
-    color: #ccc;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background: #333;
+  grid-template-areas: ". home qna logo friends subjects authMe ";
+  grid-template-columns: 1fr 256px 256px 256px 256px 256px 1fr;
 }
-.authMe{
-    /*line-height: 50px;*/
-    margin-left: 30px;
-    width: 100%;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 1fr 6fr;
-    grid-column-gap: 5px;
-    /*justify-items: center;*/
-    align-items: center;
-    text-decoration: none;
-    color: #f2f2f2;
-    font-size: 16px;
+.header .logoBox,
+.header .homeBox,
+.header .usersBox,
+.header .friendsBox,
+.header .QnABox,
+.header .authMeWrapBox {
+  width: 100%;
+  height: 50px;
+  background: #333333;
+  border-left: 1px solid black;
 }
-.authMe img{
-    width: 25px;
-    height: 25px;
-    background: #ffffff;
-    border-radius: 15px;
+.header .logoBox:hover .home,
+.header .homeBox:hover .home,
+.header .usersBox:hover .home,
+.header .friendsBox:hover .home,
+.header .QnABox:hover .home,
+.header .authMeWrapBox:hover .home,
+.header .logoBox:hover .logo,
+.header .homeBox:hover .logo,
+.header .usersBox:hover .logo,
+.header .friendsBox:hover .logo,
+.header .QnABox:hover .logo,
+.header .authMeWrapBox:hover .logo,
+.header .logoBox:hover .QnA,
+.header .homeBox:hover .QnA,
+.header .usersBox:hover .QnA,
+.header .friendsBox:hover .QnA,
+.header .QnABox:hover .QnA,
+.header .authMeWrapBox:hover .QnA,
+.header .logoBox:hover .friends,
+.header .homeBox:hover .friends,
+.header .usersBox:hover .friends,
+.header .friendsBox:hover .friends,
+.header .QnABox:hover .friends,
+.header .authMeWrapBox:hover .friends,
+.header .logoBox:hover .users,
+.header .homeBox:hover .users,
+.header .usersBox:hover .users,
+.header .friendsBox:hover .users,
+.header .QnABox:hover .users,
+.header .authMeWrapBox:hover .users {
+  color: white;
 }
-.header > .home , .logo, .Qna, .friends, .users{
-    border: solid black;
-    border-width: 0 1px 0 1px;
-    border-collapse: collapse;
+.header .home,
+.header .logo,
+.header .QnA,
+.header .friends,
+.header .users {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #cccccc;
+  transition: .1s;
 }
-.imgLogo {
-    width: 50px;
-    height: 50px;
-    
+.header .homeBox {
+  grid-area: home;
 }
-.home {
-    grid-area: home;
-
+.header .logoBox {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-area: logo;
 }
-.logo{
-    grid-area: logo;
+.header .logoBox img {
+  width: 50px;
+  height: 50px;
 }
-.QnA{
-    grid-area: qna;
+.header .QnABox {
+  grid-area: qna;
 }
-.friends{
-    grid-area: friends;
+.header .friendsBox {
+  grid-area: friends;
 }
-.users{
-    grid-area: subjects;
+.header .usersBox {
+  grid-area: subjects;
 }
-.home, .logo, .QnA, .friends, .users{
-    display: inline-block;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    text-decoration: none;
-    color: #ccc;
-
+.header .authMeWrapBox {
+  grid-area: authMe;
 }
-
-.home:hover, .logo:hover, .QnA:hover, .friends:hover, .users:hover{
-    background: #444;
+.header .authMeWrapBox img {
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 15px;
 }
-.authMe{
-
+.header .authMeWrapBox .authMe {
+  margin-left: 30px;
+  width: 100%;
+  height: 50px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-items: left;
+  grid-template-columns: 40px 1fr;
+  grid-column-gap: 5px;
+  text-decoration: none;
+  color: #f2f2f2;
+  font-size: 16px;
 }
-.authMeWrap:hover .logout{
-    visibility: visible;
-    opacity: 1;
-    transition: .2s;
+.header .authMeWrapBox:hover .logout {
+  visibility: visible;
+  opacity: 1;
+  transition: .2s;
 }
-.logout{
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    width: 250px;
-    height: 50px;
-    background: rgba(51, 51, 51, 0.72);
-    margin: 0px 0 0 -30px;
-    border-radius: 0 0 5px 5px;
-    opacity: 0;
-    visibility: hidden;
-    transition: .2s;
-    cursor: pointer;
-
+.header .authMeWrapBox .logout {
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  width: 250px;
+  height: 50px;
+  background: rgba(51, 51, 51, 0.72);
+  border-radius: 0 0 300px 300px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+  cursor: pointer;
 }
-.logout:hover{
-    background: rgba(209, 0, 3, 0.75);
+.header .authMeWrapBox .logout:hover {
+  background: rgba(209, 0, 3, 0.75);
+  transition: .2s;
 }
-.logout::selection{
-    background: transparent;
+.header .authMeWrapBox .logout::selection {
+  background: transparent;
 }
+.header .authMeWrapBox .logout .down {
+  z-index: 200;
+}
+/*# sourceMappingURL=Header.module.css.map */
