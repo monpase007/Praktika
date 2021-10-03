@@ -1,27 +1,32 @@
 {
   "files": {
-    "main.css": "/Praktika/static/css/main.e7dbf1cc.chunk.css",
-    "main.js": "/Praktika/static/js/main.b8c8174c.chunk.js",
-    "main.js.map": "/Praktika/static/js/main.b8c8174c.chunk.js.map",
+    "main.css": "/Praktika/static/css/main.55d04096.chunk.css",
+    "main.js": "/Praktika/static/js/main.158bfcc8.chunk.js",
+    "main.js.map": "/Praktika/static/js/main.158bfcc8.chunk.js.map",
     "runtime-main.js": "/Praktika/static/js/runtime-main.e1345228.js",
     "runtime-main.js.map": "/Praktika/static/js/runtime-main.e1345228.js.map",
-    "static/js/2.37d36f1b.chunk.js": "/Praktika/static/js/2.37d36f1b.chunk.js",
-    "static/js/2.37d36f1b.chunk.js.map": "/Praktika/static/js/2.37d36f1b.chunk.js.map",
+    "static/js/2.54e2a405.chunk.js": "/Praktika/static/js/2.54e2a405.chunk.js",
+    "static/js/2.54e2a405.chunk.js.map": "/Praktika/static/js/2.54e2a405.chunk.js.map",
     "index.html": "/Praktika/index.html",
-    "precache-manifest.3d3c537e415690a4e83d8bfba28144f5.js": "/Praktika/precache-manifest.3d3c537e415690a4e83d8bfba28144f5.js",
+    "precache-manifest.a874ab6497f8ce90ff66fa4b0922cd37.js": "/Praktika/precache-manifest.a874ab6497f8ce90ff66fa4b0922cd37.js",
     "service-worker.js": "/Praktika/service-worker.js",
-    "static/css/main.e7dbf1cc.chunk.css.map": "/Praktika/static/css/main.e7dbf1cc.chunk.css.map",
-    "static/js/2.37d36f1b.chunk.js.LICENSE.txt": "/Praktika/static/js/2.37d36f1b.chunk.js.LICENSE.txt",
+    "static/css/main.55d04096.chunk.css.map": "/Praktika/static/css/main.55d04096.chunk.css.map",
+    "static/js/2.54e2a405.chunk.js.LICENSE.txt": "/Praktika/static/js/2.54e2a405.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Praktika/static/media/icomoon.eb9982ce.woff",
+    "static/media/clip.svg": "/Praktika/static/media/clip.4beaf0b6.svg",
+    "static/media/close.svg": "/Praktika/static/media/close.99527504.svg",
     "static/media/icon-avatar-16.jpg": "/Praktika/static/media/icon-avatar-16.6c9609f2.jpg",
     "static/media/noteBg.jpg": "/Praktika/static/media/noteBg.8ef2f432.jpg",
     "static/media/preloader.svg": "/Praktika/static/media/preloader.0e4099c3.svg",
+    "static/media/send.svg": "/Praktika/static/media/send.52d5f4a2.svg",
+    "static/media/shevron.svg": "/Praktika/static/media/shevron.479257f5.svg",
+    "static/media/warining.svg": "/Praktika/static/media/warining.bdb6a4b9.svg",
     "static/media/warning.png": "/Praktika/static/media/warning.9f8ef976.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e1345228.js",
-    "static/js/2.37d36f1b.chunk.js",
-    "static/css/main.e7dbf1cc.chunk.css",
-    "static/js/main.b8c8174c.chunk.js"
+    "static/js/2.54e2a405.chunk.js",
+    "static/css/main.55d04096.chunk.css",
+    "static/js/main.158bfcc8.chunk.js"
   ]
 }

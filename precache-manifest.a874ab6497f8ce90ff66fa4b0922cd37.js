@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58c480f7eecde9c7aa6a93374949f6c0",
+    "revision": "d11f8227065e59febdd6a603e8e11af5",
     "url": "/Praktika/index.html"
   },
   {
-    "revision": "5774879422c6d5ace993",
-    "url": "/Praktika/static/css/main.e7dbf1cc.chunk.css"
+    "revision": "b781b15b36e6162440ae",
+    "url": "/Praktika/static/css/main.55d04096.chunk.css"
   },
   {
-    "revision": "3595699dddc5b64ba371",
-    "url": "/Praktika/static/js/2.37d36f1b.chunk.js"
+    "revision": "552769212ea250ecfa5f",
+    "url": "/Praktika/static/js/2.54e2a405.chunk.js"
   },
   {
     "revision": "cb4293a028d0175415ddb31dc1aaaefb",
-    "url": "/Praktika/static/js/2.37d36f1b.chunk.js.LICENSE.txt"
+    "url": "/Praktika/static/js/2.54e2a405.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5774879422c6d5ace993",
-    "url": "/Praktika/static/js/main.b8c8174c.chunk.js"
+    "revision": "b781b15b36e6162440ae",
+    "url": "/Praktika/static/js/main.158bfcc8.chunk.js"
   },
   {
     "revision": "d034658e98599852fa01",
@@ -64,6 +64,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Praktika/static/media/OpenSans-Regular.bbbd47d2.svg"
   },
   {
+    "revision": "4beaf0b691bebf8cdf783582338dfab5",
+    "url": "/Praktika/static/media/clip.4beaf0b6.svg"
+  },
+  {
+    "revision": "9952750401ea75607a6e1483df3f0357",
+    "url": "/Praktika/static/media/close.99527504.svg"
+  },
+  {
     "revision": "0423f1b79486132e4e5f39c305ab11f1",
     "url": "/Praktika/static/media/icomoon.0423f1b7.ttf"
   },
@@ -90,6 +98,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0e4099c30b9127d5fe2146b50e07025d",
     "url": "/Praktika/static/media/preloader.0e4099c3.svg"
+  },
+  {
+    "revision": "52d5f4a2dd8299af88727546c76af597",
+    "url": "/Praktika/static/media/send.52d5f4a2.svg"
+  },
+  {
+    "revision": "479257f5095b064934cd26ce7857341b",
+    "url": "/Praktika/static/media/shevron.479257f5.svg"
+  },
+  {
+    "revision": "bdb6a4b91a980ed2e33bc6351277ca03",
+    "url": "/Praktika/static/media/warining.bdb6a4b9.svg"
   },
   {
     "revision": "9f8ef9760085fd6a7b1e445b9d9b0874",
