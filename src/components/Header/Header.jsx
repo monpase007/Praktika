@@ -15,7 +15,7 @@ function  Header(props) {
             <div className={style.QnABox}><NavLink className={style.QnA} to="/note" >Заметки</NavLink></div>
             <div className={style.authMeWrapBox}><NavLink className={style.authMe} to="/profile" >
                 <img src={props.userProfileInfoMe.photos.small?props.userProfileInfoMe.photos.small:logo} alt="logo"/>
-                <span>{props.userProfileInfoMe.fullName}</span>
+                <span>Филиппов Юрий</span>
             </NavLink>
                 <span onClick={logout} className={style.logout}>Выйти</span>
             </div>

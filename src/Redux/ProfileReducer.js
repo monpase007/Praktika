@@ -27,6 +27,7 @@ let initialState = {
             values: "Всем привет",
             urlImg: 'https://techrocks.ru/wp-content/uploads/2019/03/content_0e5a9923.jpg',
             comment: ["This is coool)*)"],
+            dateCreate: new Date().toJSON().slice(0,10).replace(/-/g,'/'),
             likeCount: 23,
             likeFlag: true
         }
@@ -82,6 +83,7 @@ const ProfileReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_POST:
+            let utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
             if (state.Posts.length === 0) {
                 return {
                     ...state,
@@ -89,6 +91,7 @@ const ProfileReducer = (state = initialState, action) => {
                         id: 0,
                         values: action.text,
                         urlImg: action.url,
+                        dateCreate: utc,
                         comment: [],
                         likeCount: 0,
                         likeFlag: false
@@ -104,6 +107,7 @@ const ProfileReducer = (state = initialState, action) => {
                         id: temp,
                         values: action.text,
                         urlImg: action.url,
+                        dateCreate: utc,
                         comment: [],
                         likeCount: 0,
                         likeFlag: false

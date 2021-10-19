@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './MyStatus.module.css'
 
-class MyStatus extends React.Component {
+class  MyStatus extends React.Component {
 
     state = {
         editMode: false,

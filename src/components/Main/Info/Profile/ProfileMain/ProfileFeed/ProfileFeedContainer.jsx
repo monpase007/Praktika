@@ -13,8 +13,8 @@ let mapStateToProps = (state) => ({
         avatar: state.profilePage.userProfileInfoMe.photos.small
     });
 let mapDispatchToProps = (dispatch) =>({
-        addPost: (text,value) => {
-            dispatch(addPostCreate(text,value));
+        addPost: (text,value,photo=null) => {
+            dispatch(addPostCreate(text,value,photo));
         },
         deletePost: (id) => {
             dispatch(deletePostCreate(id));

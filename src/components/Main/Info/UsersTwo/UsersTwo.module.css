@@ -15,8 +15,11 @@
     height: 100px;
     grid-template-rows: 30px 30px 40px;
     align-items: center;
+    margin-left: 20px;
 }
 .name, .userStatus{
+    text-decoration: none;
+    color: black;
     line-height: 30px;
 }
 .userStatus{

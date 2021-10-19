@@ -1,28 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './ProfileFeed.module.css';
 import Post from "./Post/Post";
 import {Field, reduxForm} from "redux-form";
+import logo from "../../../../../../assets/images/icon-avatar-16.jpg";
+import send from "../../../../../../assets/images/sendPost/send.svg";
+import clip from "../../../../../../assets/images/sendPost/clip.svg";
 
-const AddPostReduxForm = (props) => {
-    return (
-        <form onSubmit={props.handleSubmit} className={style.profileFeed}>
-            <div className={style.addPostSpanBox}><span>&#10010; Добавить пост</span></div>
-            <div className={style.wrapInput}>
-                <Field className={style.inputPost}  name={'text'} component={'textarea'} placeholder='Напишите учебный пост для одногруппников...'/>
-            </div>
-            <div className={style.wrapInput2}>
-                <Field className={style.inputPost2}  name={'url'} component={'textarea'} placeholder='Вставте ссылку на картинку...'/>
-                <button className={style.btn}>Опубликовать</button>
-            </div>
-        </form>
-    )
-};
-let AddPostForm = reduxForm({
-    form: 'addPost'
-})(AddPostReduxForm);
 
 function ProfileFeed(props) {
+    const [photo, setPhoto] = useState(null);
+    const [newTextPost, setNewTextPost] = useState('');
     let posts = props.profilePage.Posts.map(p => <Post deletePost={props.deletePost}
+                                                       key={p.id}
                                                        updateTextPost={props.updatePost}
                                                        likePlusPost={props.likePlus}
                                                        likeMinusPost={props.likeMinus}
@@ -31,24 +20,60 @@ function ProfileFeed(props) {
                                                        likeCount={p.likeCount}
                                                        url={p.urlImg}
                                                        likeFlag={p.likeFlag}
+                                                       dateCreate={p.dateCreate}
                                                        avatar={props.avatar}/>)
 
-    let addPost = (values) => {
-        if(values.text || values.url){
-            props.addPost(values.text, values.url);
-            values.text = values.url = ''
+    let addPost = () => {
+        if(newTextPost){
+            props.addPost(newTextPost, photo);
+            setPhoto(null)
+            setNewTextPost('')
         }
     };
+    const changeTextPost = (e) => {
+        setNewTextPost(e.target.value)
+    }
+
+    function getBase64(file) {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+            setPhoto(reader.result);
+            console.log(reader.result)
+        };
+        reader.onerror = function (error) {
+            console.log('Error: ', error);
+        };
+
+    }
+
+    const addPhoto = (e) => {
+        getBase64(e.target.files[0])
+    };
+
+
     return (
         <div className={style.profileFeed1}>
-            <AddPostForm onSubmit={addPost}/>
+            <span className={style.addPostSpanBox}>Мои посты</span>
+            <div className={style.wrapInputAndIcon}>
+                <input className={style.inputPost} onChange={changeTextPost}
+                       placeholder='Напишите учебный пост для одногруппников...' value={newTextPost} type="text"/>
+                <div className={`${style.imgBox} ${style.imgBoxSend}`}>
+                    <img onClick={addPost} className={style.imgSend} src={send} alt="" title={'Добавить пост'}/>
+                </div>
+                <label>
+                    <div className={`${style.imgBox} ${style.imgBoxClip}`}>
+                        <img className={style.imgClip} src={clip} title={'Добавить изображение'} alt=""/>
+                    </div>
+                    <input className={style.inputClipOut} onChange={addPhoto} type="file"/>
+                </label>
+            </div>
             <div className={style.posts}>
                 {posts}
             </div>
         </div>
     );
 }
-
 
 
 export default ProfileFeed;

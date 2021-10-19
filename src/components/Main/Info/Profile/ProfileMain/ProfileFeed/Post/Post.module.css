@@ -22,13 +22,7 @@
     background: #f7f7f7;
     color: #333333;
 }
-.span {
-    margin-top: 30px;
-    text-align: center;
-    display: block;
-    font-size: 20px;
-    color: #cccccc;
-}
+
 .btnModal {
     width: 150px;
     height: 35px;
@@ -50,13 +44,14 @@
     top: 25%;
     font-size: 22px;
     cursor: pointer;
+    overflow: hidden;
 }
 .textArea {
     box-sizing: border-box;
     height: 300px;
-    width: 606px;
+    width: 100%;
     padding: 10px 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 16px;
     border: 1px solid #f2f2f2;
     border-radius: 10px;

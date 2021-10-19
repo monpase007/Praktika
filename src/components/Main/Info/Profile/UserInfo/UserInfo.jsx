@@ -27,7 +27,7 @@ const UserInfo = (props) => {
             <div>
                 {props.isAuth
                     ?<div className={style.avatarBox}>
-                        <img className={style.avatar} src={props.userProfileInfoMe.photos.large || logo} alt=""/>
+                        <img className={style.avatar} src={props.userProfileInfoMe.photos.large || logo}  alt=""/>
                         <label className={style.updateAvatarLabal}><input onChange={updatePhoto} className={style.updateAvatarBtn} type={'file'}/>Загрузить фото..</label>
                     </div>
                     :<Preloader/>}

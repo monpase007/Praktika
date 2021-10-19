@@ -1,60 +1,45 @@
 import React, {useState} from 'react';
 import style from './Post.module.css';
-import Modal from "react-modal";
+import Popup from "../../../../../../Popap/Popap";
 
-Modal.setAppElement('#root');
+function Post({id,...props}) {
 
-function Post(props) {
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    let id = props.id;
-
-    let deletePost = () => {
+    const [isEditPost, setIsEditPost] = useState(false);
+        const [textPostUpdate, setTextPostUpdate] = useState(props.value);
+    let data = {
+        id: id,
+        text:textPostUpdate
+    }
+    const deletePost = () => {
         props.deletePost(id);
     };
 
-    let updatePost = (e) => {
-        let text = e.target.value;
-        props.updateTextPost(id, text);
+    const updatePost = (e) => {
+        setTextPostUpdate( e.target.value)
     };
 
-    let likePlus = () => {
+    const likePlus = () => {
         props.likePlusPost(id, props.likeFlag);
     };
-    let likeMinus = () => {
+    const likeMinus = () => {
         props.likeMinusPost(id, props.likeFlag);
     };
-    let ref = React.createRef();
-    let ViewComment = () => {
-        ref.current.preventDefault();
-        this.className.toggle(style.commentBlockView)
-    };
+    const onEdit = () => {
+        setIsEditPost(true);
+    }
     return (
         <div className={style.posts}>
-            {/*Модальное окно*/}
-            <Modal className={style.modalWindow} isOpen={modalIsOpen}
-                   shouldCloseOnOverlayClick={() => setModalIsOpen(false)}
-                   onRequestClose={() => setModalIsOpen(false)} style={props.style}>
-                <a onClick={() => setModalIsOpen(false)} className={style.close}>&#10006;</a>
-                <div className={style.bodyModal}>
-                    <span className={style.span}>Изменение поста &#9998;</span>
-                    <textarea onChange={updatePost} className={style.textArea} value={props.value}/>
-                </div>
-                <div className={style.footerModalNote}>
-
-                </div>
-            </Modal>
             <div className={style.user}>
                 <img className={style.img}
                      src={props.avatar}
-                     alt="аватарка"/>
+                     alt=""/>
                 <div className={style.headerPost}>
                     <div>
-                        <div className={style.name}>monpase007</div>
-                        <div className={style.date}>25 ноя 2020г.</div>
+                        <div className={style.name}>Филиппов Юрий</div>
+                        <div className={style.date}>{props.dateCreate}</div>
                     </div>
                     <div className={style.btnsPosts}>
-                        <span className={style.option} onClick={() => setModalIsOpen(true)}
+                        <span className={style.option} onClick={onEdit}
                            title='Редактировать пост'>&#9998;</span>
                         <span className={style.option} onClick={deletePost} title='Удалить пост'>&#10006;</span>
                     </div>
@@ -72,16 +57,12 @@ function Post(props) {
                     <span>{props.likeCount}</span>
                     <span className={`${style.comment} ${style.wrap}`}/>
                 </div>
-                <div ref={ref}  className={style.commentBlockDontView}>
-                    <div className={style.comments}>
-
-                    </div>
-                    <div  className={style.commentWrapInput}>
-                        <textarea className={style.textAreaComment} type="text" placeholder="Оставить комментарий.."/>
-                        <span onClick={ViewComment} className={style.btnSentComment} type="button"/>
-                    </div>
-                </div>
-
+                {
+                    isEditPost &&
+                    <Popup title={'Изменение поста'}  del={()=>{setIsEditPost(false)}} data={data}>
+                        <textarea onChange={updatePost} className={style.textArea} value={textPostUpdate}/>
+                    </Popup>
+                }
             </div>
         </div>
     );

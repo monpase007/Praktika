@@ -12,3 +12,7 @@
 .sumError{
     color: red;
 }
+.lgn{
+    margin-left: 20px;
+    text-decoration: -webkit-link;
+}

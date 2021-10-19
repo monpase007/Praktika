@@ -13,7 +13,13 @@ const IS_PROGRESS_FOLLOWING = 'IS_PROGRESS_FOLLOWING';
 
 let initialState = {
     users: [
-        // {id: 1, name:'Ura', uniqueUrlName: null, photos:{large:'', small:''}, status:'Духом не падешь, силой взять не смогут',followed:true},
+        {id: 1, name:'Киселева Анастасия', uniqueUrlName: null, photos:{large:'', small:''}, status:'ИБД-17-07',followed:true},
+        {id: 1, name:'Алексеев Сергей', uniqueUrlName: null, photos:{large:'', small:''}, status:'ИБД-17-09',followed:true},
+        {id: 1, name:'Виктор Поздеев', uniqueUrlName: null, photos:{large:'', small:''}, status:'ИБД-17-07',followed:true},
+        {id: 1, name:'Шерматова Милена', uniqueUrlName: null, photos:{large:'', small:''}, status:'ИБД-17-07',followed:true},
+        {id: 1, name:'Федотов Николай', uniqueUrlName: null, photos:{large:'', small:''}, status:'ИБД-17-07',followed:true},
+        {id: 1, name:'Бороздин Никита', uniqueUrlName: null, photos:{large:'', small:''}, status:'ИБД-17-07',followed:true},
+        {id: 1, name:'Кайкова Ирина', uniqueUrlName: null, photos:{large:'', small:''}, status:'ИБД-17-07',followed:true},
     ],
     friends: [
         // {id: 1, name:'Ura', uniqueUrlName: null, photos:{large:'', small:''}, status:'Духом не падешь, силой взять не смогут',followed:true},
@@ -44,11 +50,11 @@ const UsersTwoReducer = (state = initialState, action) => {
                         return {...u, followed: false};
                     else return u;
                 })}}
-        case SET_USERS:{
-            return {
-                ...state,
-                users: [...action.users]
-            }}
+        // case SET_USERS:{
+        //     return {
+        //         ...state,
+        //         users: [...action.users]
+        //     }}
             case SET_FRIENDS:{
             return {
                 ...state,

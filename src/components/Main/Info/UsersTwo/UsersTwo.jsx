@@ -1,22 +1,18 @@
 import React from 'react';
 import style from './UsersTwo.module.css';
-import avatar from '../../../../assets/images/icon-avatar-16.jpg'
 import Preloader from "../../../smallComponents/Preloader/Preloader";
 import {NavLink} from "react-router-dom";
-import {followAPI} from "../../../../api/api";
-import {followThunk} from "../../../../Redux/UserTwoReducer";
+
 
 const UsersTwo = (props) => {
-
+    const avatar = 'https://image.flaticon.com/icons/png/512/64/64572.png'
     let countPage = Math.ceil(props.totalCount / props.sizePage);
     let arrPageNumber = [], arrPageNumberSmall = [];
     for (let i = 1; i <= countPage; i++) {
         arrPageNumber.push(i);
     }
-    //описание логики скукоживания нумерации  страницы
     let cur = props.currentPage;
     if (arrPageNumber.length > 6) {
-
         for (let i = 1; i <= 3; i++) {
             arrPageNumberSmall.push(i);
         }
@@ -30,12 +26,12 @@ const UsersTwo = (props) => {
             arrPageNumberSmall.push(i);
         }
     }
-    debugger
     return (
         <>
             {props.isFetching ?
                 <Preloader/> :
                 <>
+                    <h1 style={{textAlign:"center"}}>Пользователи</h1>
                     <div className={style.paginatorBox}>
                         <div className={style.number}>
                             {arrPageNumberSmall.map(e => {
@@ -59,7 +55,7 @@ const UsersTwo = (props) => {
                             <div className={style.userInfo}>
                                 <NavLink to={`/viewUserProfile/${u.id}`} className={style.name}>{u.name}</NavLink>
 
-                                <div className={style.userStatus}>{u.status ? `Статус: ${u.status}` : null}</div>
+                                <div className={style.userStatus}>{u.status ? `Группа: ${u.status}` : null}</div>
 
                                 {u.followed ?
                                     <button disabled={props.isFollowingUser.some(id => id === u.id)}

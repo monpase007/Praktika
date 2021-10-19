@@ -6,6 +6,7 @@ import ViewUserProfileReducer from "./ViewUserProfileReducer";
 import middleware from 'redux-thunk';
 import { reducer as formReducer } from 'redux-form'
 import AppReducer from "./AppReducer";
+import QnaReducer from "./QnaReducer";
 
 
 let reducers = combineReducers({
@@ -13,6 +14,7 @@ let reducers = combineReducers({
     notePage: NotesReducer,
     userTwoPage: UsersTwoReducer,
     userProfile: ViewUserProfileReducer,
+    QnaReducer: QnaReducer,
     form: formReducer,
     app: AppReducer
 });

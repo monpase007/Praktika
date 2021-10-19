@@ -11,10 +11,9 @@
 }
 .addPostSpanBox{
     width: 80%;
-    padding-left: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 26px;
-    color: #cccccc;
+    color: #828282;
 }
 .addPostSpanBox span::selection{
     background: transparent;
@@ -22,63 +21,54 @@
 .wrapInput{
     height: 60px;
 }
-.wrapInput2{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    width: 750px;
+
+.wrapInputAndIcon{
+    position: relative;
+    width: 80%;
     height: 60px;
-    justify-items: right;
+    text-align: center;
+}
+.inputPost {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    width: 100%;
+    height: 50px;
+    padding: 5px 60px 5px 20px;
+    resize: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    outline: none;
 }
 
-.inputPost {
-    display: block;
-    box-sizing: border-box;
-    border: 1px solid #f2f2f2;
-    width: 750px;
-    height: 50px;
-    padding: 5px 20px;
-    resize: none;
-    transition: 0.3s;
-    border-radius: 10px;
-    outline: none;
-}
-/*.inputPost:focus{*/
-/*    width: 850px;*/
-/*    height: 60px;*/
-/*    padding: 5px 70px;*/
-/*}*/
-.inputPost2{
-    display: block;
-    box-sizing: border-box;
-    border: 1px solid #f2f2f2;
-    width: 570px;
-    height: 40px;
-    padding: 5px 20px;
-    resize: none;
-    transition: 0.3s;
-    border-radius: 10px;
-    outline: none;
-}
 .inputPost2:focus, .inputPost:focus{
-    box-shadow: 5px 5px 10px -5px rgba(224, 224, 224, 0.8);
+    box-shadow: 5px 5px 10px -5px rgba(224, 224, 224, 0.9);
 }
-.btn{
-    width: 150px;
-    height: 40px;
-    font-size: 16px;
-    color: #333333;
-    border: 1px solid #f2f2f2;
-    border-radius: 10px;
-    background: #e0e0e0;
-    outline: none;
+.inputClipOut{
+    visibility: hidden;
+    position: fixed;
+    left: -1000px;
+    top: -1000px;
 }
-.btn:hover{
-    background: #bebebe;
-    color: #f2f2f2;
+.imgSend, .imgClip {
+    width: 30px;
+    height: 30px;
 }
-.btn:active{
-    background: #b0b0b0;
-    color: #f2f2f2;
+.imgBox{
+    position: absolute;
+    line-height: 70px;
+    text-align: center;
+    top: 0;
+    height: 50px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.imgBoxSend{
+    right: 5px;
+}
+.imgBoxClip{
+    right: 45px;
 }
 .posts {
     display: grid;

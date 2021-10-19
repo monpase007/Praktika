@@ -22,6 +22,8 @@ const LoginReduxForm = (props) => {
                                                                                   component={'input'}
                                                                                   type="checkbox"/><span>Запонить меня</span></label>
             </div>
+            <div className={`${style.lgn} ${style.rememberMe}`}><label><a  href='#'>Регистрация</a></label>
+            </div>
             {props.captchaURL &&
             <div className={`${style.wrapper} ${style.captcha}`}>
                 <img src={props.captchaURL} alt="captcha"/>
