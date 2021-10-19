@@ -13,7 +13,7 @@ export const getIsAuth = (state) => {
 };
 
 export const getStatus = (state) => {
-    return state.profilePage.status;
+    return state.profilePage.status ;
 };
 
 export const getStatusOneSymbols = createSelector(getStatus, (item) => {return item[0]});

@@ -15,6 +15,7 @@ export const ValidateInput = ({input, meta, ...props}) => {
         </div>
     )
 };
+
 export const ValidateTextArea = ({input, meta, ...props}) => {
     let condition = meta.error && meta.touched;
     return (

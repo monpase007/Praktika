@@ -31,7 +31,7 @@ function Post({id,...props}) {
         <div className={style.posts}>
             <div className={style.user}>
                 <img className={style.img}
-                     src={props.avatar}
+                     src={props.avatar || 'https://static.mk.ru/upload/entities/2020/07/23/17/articles/detailPicture/91/9c/8a/7b/0fb74b1d41a574b376fbabd62d828b24.jpg'}
                      alt=""/>
                 <div className={style.headerPost}>
                     <div>

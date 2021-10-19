@@ -27,14 +27,14 @@ const UserInfo = (props) => {
             <div>
                 {props.isAuth
                     ?<div className={style.avatarBox}>
-                        <img className={style.avatar} src={props.userProfileInfoMe.photos.large || logo}  alt=""/>
+                        <img className={style.avatar} src={props.userProfileInfoMe.photos.large || 'https://static.mk.ru/upload/entities/2020/07/23/17/articles/detailPicture/91/9c/8a/7b/0fb74b1d41a574b376fbabd62d828b24.jpg'}  alt=""/>
                         <label className={style.updateAvatarLabal}><input onChange={updatePhoto} className={style.updateAvatarBtn} type={'file'}/>Загрузить фото..</label>
                     </div>
                     :<Preloader/>}
             </div>
 
             <div>
-                <div className={style.userName}>{props.userProfileInfo.login}</div>
+                <div className={style.userName || 'monpase007'}>{props.userProfileInfo.login}</div>
                 <MyStatus status={props.status} requestStatus={props.requestStatus} setStatus={props.setStatus} userId={props.userProfileInfo.id}/>
                 <div className={style.aboutMe}><button onClick={()=>{setModalIsOpen(true)}} >Обо мне..</button></div>
                 {modalIsOpen&&<FormModalAboutMe setUserData={props.setUserData} userProfileInfoMe={props.userProfileInfoMe} modalIsOpen={modalIsOpen} setModalIsOpen={setEditModal} StyleModal={props.StyleModal}/>}

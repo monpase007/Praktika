@@ -46,7 +46,7 @@ class  MyStatus extends React.Component {
             <div>
                 {!this.state.editMode
                     ? <div className={style.statusText}>
-                        <span onClick={this.activateEditMode} >{this.props.status || 'No status'}</span>
+                        <span onClick={this.activateEditMode} >{this.props.status || 'Учиться! Учиться! И еще раз - Учиться!'}</span>
                     </div>
                     : <div className={style.statusInputBox}>
                         <textarea className={style.statusInput} onBlur={this.setTimoutDeActivate}  value={this.state.status} autoFocus={true}  onChange={this.onStatusChange} type="text"/>
