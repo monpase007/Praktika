@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d11f8227065e59febdd6a603e8e11af5",
+    "revision": "088c4eae9a9dc1be1a0ef83bcee402b9",
     "url": "/Praktika/index.html"
   },
   {
-    "revision": "b781b15b36e6162440ae",
-    "url": "/Praktika/static/css/main.55d04096.chunk.css"
+    "revision": "d40097ea1a73afc70d2a",
+    "url": "/Praktika/static/css/main.6602d99d.chunk.css"
   },
   {
-    "revision": "552769212ea250ecfa5f",
-    "url": "/Praktika/static/js/2.54e2a405.chunk.js"
+    "revision": "e2f2f814838e4cd5ea98",
+    "url": "/Praktika/static/js/2.ce6227c8.chunk.js"
   },
   {
     "revision": "cb4293a028d0175415ddb31dc1aaaefb",
-    "url": "/Praktika/static/js/2.54e2a405.chunk.js.LICENSE.txt"
+    "url": "/Praktika/static/js/2.ce6227c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b781b15b36e6162440ae",
-    "url": "/Praktika/static/js/main.158bfcc8.chunk.js"
+    "revision": "d40097ea1a73afc70d2a",
+    "url": "/Praktika/static/js/main.62bc6a61.chunk.js"
   },
   {
     "revision": "d034658e98599852fa01",
     "url": "/Praktika/static/js/runtime-main.e1345228.js"
+  },
+  {
+    "revision": "4b6a3452f130b3b87ece758fda950701",
+    "url": "/Praktika/static/media/OpenSans-Bold.4b6a3452.svg"
   },
   {
     "revision": "5487bea91cef82008fdc6e874b4c5c86",
@@ -32,16 +36,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Praktika/static/media/OpenSans-Bold.759ea19b.woff"
   },
   {
-    "revision": "8eb005f737c1e60d2e4df01c70913aaf",
-    "url": "/Praktika/static/media/OpenSans-Bold.8eb005f7.svg"
-  },
-  {
     "revision": "93fe8f3415688d16bb947e2c96ea380e",
     "url": "/Praktika/static/media/OpenSans-Bold.93fe8f34.woff2"
   },
   {
     "revision": "ab38fda09644c992dc09754c3cc78201",
     "url": "/Praktika/static/media/OpenSans-Bold.ab38fda0.ttf"
+  },
+  {
+    "revision": "08bcaca3c467eacdfbceb68fb995e701",
+    "url": "/Praktika/static/media/OpenSans-Regular.08bcaca3.svg"
   },
   {
     "revision": "38ca9e2302c8793c93f854e8595eed78",
@@ -60,10 +64,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Praktika/static/media/OpenSans-Regular.8df00d61.ttf"
   },
   {
-    "revision": "bbbd47d2660d3547e98a864324874080",
-    "url": "/Praktika/static/media/OpenSans-Regular.bbbd47d2.svg"
-  },
-  {
     "revision": "4beaf0b691bebf8cdf783582338dfab5",
     "url": "/Praktika/static/media/clip.4beaf0b6.svg"
   },
@@ -72,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Praktika/static/media/close.99527504.svg"
   },
   {
-    "revision": "0423f1b79486132e4e5f39c305ab11f1",
-    "url": "/Praktika/static/media/icomoon.0423f1b7.ttf"
+    "revision": "00f06d47225beb9304bc535935b9a177",
+    "url": "/Praktika/static/media/icomoon.00f06d47.svg"
   },
   {
-    "revision": "65b5f5ad4a0951c339e72aa3976ebd85",
-    "url": "/Praktika/static/media/icomoon.65b5f5ad.svg"
+    "revision": "0423f1b79486132e4e5f39c305ab11f1",
+    "url": "/Praktika/static/media/icomoon.0423f1b7.ttf"
   },
   {
     "revision": "80bec9a18856394471577659385eb0ee",
